@@ -23,11 +23,9 @@ class AuthenticationService {
     }
 
     executeBasicAuthenticationService(name, password) {
-        // return axios.get('http://localhost:8081/e-auction/api/v1/user/login',
-        //     { headers: { authorization: this.createBasicAuthToken(username, password) } })
         const requestBody= {"name": name,"password": password}
         console.log("requestBody:" + requestBody );
-        return axios.post('http://localhost:8081/e-auction/api/v1/user/login', requestBody)
+        return axios.post('http://54.214,122.197:8081/e-auction/api/v1/user/login', requestBody)
                     .then(response => this.registerSuccessfulLogin(response.data.accessToken,name))
     }
 
