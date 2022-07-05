@@ -1,7 +1,7 @@
 version: '3'
 services: 
     frontend:
-        image: eauctionathackfse/eauction-frontend-dynamic
+        image: eauctionathackfse/eauction-frontend-aws
         build: 
             context: .
             dockerfile: Dockerfile
